@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a91f18">
+<title>ZAIKA SERVICE | Birgunj</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fffaf3;color:#292321}
+header{background:#a91f18;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px}
+header small{display:block;font-size:12px}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+.hero{text-align:center;padding:65px 15px;background:linear-gradient(135deg,#ffe2bd,#fff7ed)}
+.hero h1{font-size:clamp(32px,7vw,50px);color:#a91f18;line-height:1.2}
+.hero p{font-size:17px}
+.btn{border:0;background:#16834a;color:white;padding:13px 22px;border-radius:30px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+section{max-width:1050px;margin:auto;padding:35px 18px}
+h2{text-align:center;color:#a91f18;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:20px;border-radius:15px;box-shadow:0 4px 15px #00000012}
+.card h3{margin:0 0 8px}
+.card p{color:#666}
+.price{color:#16834a;font-weight:bold;margin:12px 0}
+input,textarea,select{width:100%;padding:12px;margin:7px 0 15px;border:1px solid #ddd;border-radius:8px;font-size:15px}
+input[type=number]{max-width:100px}
+label{font-weight:bold;font-size:14px}
+.order-box{background:white;padding:22px;border-radius:15px;box-shadow:0 4px 15px #00000012}
+.item-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #eee;padding:12px 0}
+.item-row input{margin:0;width:75px}
+footer{background:#292321;color:white;text-align:center;padding:20px;font-size:13px}
+.notice{text-align:center;color:#777;font-size:13px}
+button:disabled{opacity:.5}
+</style>
+</head>
+<body>
+
+<header>
+ <div>
+  <div class="logo">ZAIKA SERVICE</div>
+  <small>घर जैसा स्वाद, हर दिन आपके साथ ❤️</small>
+ </div>
+ <nav>
+  <a href="#menu">मेन्यू</a>
+  <a href="#order">ऑर्डर</a>
+  <a href="#contact">संपर्क</a>
+ </nav>
+</header>
+
+<div class="hero">
+ <h1>हर निवाले में<br>घर का स्वाद!</h1>
+ <p>बीरगंज में ताज़ा और स्वादिष्ट खाना अपने घर या ऑफिस पर मँगाइए।</p>
+ <a href="#menu" class="btn">मेन्यू देखें 🍽️</a>
+</div>
+
+<section id="menu">
+ <h2>🍽️ हमारा मेन्यू</h2>
+ <div class="grid">
+
+  <div class="card">
+   <h3>🥗 वेज थाली</h3>
+   <p>दाल, चावल, सब्जी और रोटी।</p>
+   <div class="price">कीमत WhatsApp पर पूछें</div>
+  </div>
+
+  <div class="card">
+   <h3>🍛 स्पेशल वेज थाली</h3>
+   <p>घर के स्वाद वाला भरपेट भोजन।</p>
+   <div class="price">कीमत WhatsApp पर पूछें</div>
+  </div>
+
+  <div class="card">
+   <h3>🍗 अंडा / नॉन-वेज</h3>
+   <p>आज की उपलब्धता WhatsApp पर पूछें।</p>
+   <div class="price">कीमत WhatsApp पर पूछें</div>
+  </div>
+
+ </div>
+</section>
+
+<section id="order">
+ <h2>🛒 अपना ऑर्डर दें</h2>
+ <div class="order-box">
+
+  <h3>1. खाना और मात्रा चुनें</h3>
+
+  <div class="item-row">
+   <span>वेज थाली</span>
+   <input type="number" id="veg" min="0" value="0">
+  </div>
+
+  <div class="item-row">
+   <span>स्पेशल वेज थाली</span>
+   <input type="number" id="special" min="0" value="0">
+  </div>
+
+  <div class="item-row">
+   <span>अंडा / नॉन-वेज</span>
+   <input type="number" id="nonveg" min="0" value="0">
+  </div>
+
+  <h3>2. अपनी जानकारी भरें</h3>
+
+  <form id="orderForm">
+   <label>आपका नाम *</label>
+   <input id="name" type="text" placeholder="अपना नाम लिखें" required>
+
+   <label>मोबाइल नंबर *</label>
+   <input id="phone" type="tel" placeholder="अपना मोबाइल नंबर" required>
+
+   <label>डिलीवरी का पता *</label>
+   <textarea id="address" rows="3" placeholder="अपना पूरा पता और लोकेशन लिखें" required></textarea>
+
+   <label>खास निर्देश (वैकल्पिक)</label>
+   <textarea id="note" rows="2" placeholder="जैसे कम मसाला, जल्दी डिलीवरी आदि"></textarea>
+
+   <button class="btn" type="submit" style="width:100%">
+    WhatsApp पर ऑर्डर भेजें
+   </button>
+  </form>
+
+  <p class="notice">ऑर्डर भेजने के बाद WhatsApp पर कीमत और डिलीवरी की पुष्टि होगी।</p>
+ </div>
+</section>
+
+<section>
+ <h2>ऑर्डर कैसे करें?</h2>
+ <div class="grid">
+  <div class="card">
+   <h3>1. मेन्यू देखें</h3>
+   <p>अपनी पसंद का खाना चुनें।</p>
+  </div>
+  <div class="card">
+   <h3>2. जानकारी भरें</h3>
+   <p>नाम, मोबाइल और पता लिखें।</p>
+  </div>
+  <div class="card">
+   <h3>3. ऑर्डर भेजें</h3>
+   <p>WhatsApp पर ऑर्डर भेजें और पुष्टि प्राप्त करें।</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="order-box" style="text-align:center">
+  <h2>ZAIKA SERVICE</h2>
+  <p>📍 Birgunj, Nepal</p>
+  <p>ताज़ा खाना और घर जैसा स्वाद।</p>
+ </div>
+</section>
+
+<footer>
+ © 2026 ZAIKA SERVICE · Birgunj, Nepal
+ <p>Made with ❤️ for food lovers</p>
+</footer>
+
+<script>
+// अपना असली WhatsApp नंबर 977 सहित डालें।
+const WHATSAPP_NUMBER = "977XXXXXXXXXX";
+
+document.getElementById("orderForm").addEventListener("submit",function(e){
+ e.preventDefault();
+
+ if(WHATSAPP_NUMBER === "977XXXXXXXXXX"){
+  alert("पहले वेबसाइट में अपना WhatsApp नंबर डालें।");
+  return;
+ }
+
+ const veg = Math.max(0,parseInt(document.getElementById("veg").value)||0);
+ const special = Math.max(0,parseInt(document.getElementById("special").value)||0);
+ const nonveg = Math.max(0,parseInt(document.getElementById("nonveg").value)||0);
+
+ if(veg+special+nonveg===0){
+  alert("कृपया कम से कम एक खाना चुनें।");
+  return;
+ }
+
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const address=document.getElementById("address").value.trim();
+ const note=document.getElementById("note").value.trim();
+
+ const items=[];
+ if(veg>0) items.push("वेज थाली: "+veg);
+ if(special>0) items.push("स्पेशल वेज थाली: "+special);
+ if(nonveg>0) items.push("अंडा / नॉन-वेज: "+nonveg);
+
+ const message=
+ "नमस्ते ZAIKA SERVICE! मुझे खाना ऑर्डर करना है।\n\n"+
+ "ऑर्डर:\n"+items.join("\n")+
+ "\n\nनाम: "+name+
+ "\nमोबाइल: "+phone+
+ "\nपता: "+address+
+ "\nखास निर्देश: "+(note||"कोई नहीं")+
+ "\n\nकृपया कीमत और डिलीवरी की पुष्टि करें।";
+
+ const url="https://wa.me/"+WHATSAPP_NUMBER+
+ "?text="+encodeURIComponent(message);
+
+ window.open(url,"_blank");
+});
+</script>
+
+</body>
+</html>
